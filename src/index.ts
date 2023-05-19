@@ -3,7 +3,9 @@ import mongoose from 'mongoose'
 import { json } from 'body-parser'
 import { equipmentRouter } from './routes/equipment.routes'
 
+const cors = require('cors');
 const app = express();
+app.use(cors());
 app.use(json());
 app.use('/equipment', equipmentRouter);
 

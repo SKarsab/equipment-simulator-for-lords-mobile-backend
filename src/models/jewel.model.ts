@@ -3,7 +3,7 @@ import { IEquipment } from '../interfaces/equipment.interface';
 import { IStat } from '../interfaces/stat.interface';
 import { statSchema } from './stat.model';
 
-const equipmentSchema = new mongoose.Schema({
+const jewelSchema = new mongoose.Schema({
     type: {
         type: String,
         required: true
@@ -24,6 +24,6 @@ const equipmentSchema = new mongoose.Schema({
         type: [statSchema],
         required: true
     }
-}, { collection: 'equipment' });
+}, { collection: 'jewels' });
 
-export const equipmentModel = mongoose.model<IEquipment & mongoose.Document>('EquipmentSchema', equipmentSchema);
+export const jewelModel = mongoose.model<IEquipment & mongoose.Document>('JewelSchema', jewelSchema);
